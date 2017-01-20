@@ -39,16 +39,16 @@ impl EventHandler for Chad {
                                 match (channel, text) {
                                     (Some(channel), Some(text)) => {
                                         self.handle_message(cli, &channel, &text);
-                                    }
-                                    _ => (),
+                                    },
+                                    _ => ()
                                 }
-                            }
-                            _ => (),
+                            },
+                            _ => ()
                         }
-                    }
+                    },
                     _ => (),
                 }
-            }
+            },
             _ => (),
         }
 

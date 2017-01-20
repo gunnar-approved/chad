@@ -10,10 +10,10 @@ pub struct EchoHandler {
 }
 
 impl MessageHandler for EchoHandler {
-    fn new(regex: Regex) -> Box<Self> {
+    fn new(regex: Regex) -> Box<MessageHandler> {
         Box::new(EchoHandler { regex: regex })
     }
-
+    
     fn handle(&self, message: &str) -> Option<String> {
         if self.regex.is_match(message) {
             return Some(message.to_owned());
